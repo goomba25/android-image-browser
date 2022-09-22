@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">UsbGalleryToJava</string>
+    
+    <string name="tree_view_default_title_text">USB Gallery</string>
 </resources>
