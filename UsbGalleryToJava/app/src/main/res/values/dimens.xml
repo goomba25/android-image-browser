@@ -6,4 +6,8 @@
     <dimen name="toolbar_back_button_left_margin">20dp</dimen>
     <dimen name="toolbar_title_text_size">26dp</dimen>
 
+    <dimen name="tree_view_none_connection_text_size">30dp</dimen>
+    <dimen name="tree_view_directory_title_text_size">32dp</dimen>
+    <dimen name="tree_view_directory_count_text_size">20dp</dimen>
+
 </resources>

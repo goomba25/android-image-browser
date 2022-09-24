@@ -6,4 +6,29 @@
         <item name="android:textSize">@dimen/toolbar_title_text_size</item>
         <item name="android:textColor">@color/toolbar_title_text_color</item>
     </style>
+
+    <style name="TreeView"/>
+
+    <style name="TreeView.NoDevice">
+        <item name="android:textSize">@dimen/tree_view_none_connection_text_size</item>
+        <item name="android:textColor">@color/tree_view_none_connection_text_color</item>
+        <item name="android:fontWeight">500</item>
+    </style>
+
+    <style name="TreeView.Tile"/>
+
+    <style name="TreeView.Tile.Directory"/>
+
+    <style name="TreeView.Tile.Directory.Title">
+        <item name="android:textSize">@dimen/tree_view_directory_title_text_size</item>
+        <item name="android:textColor">@color/tree_view_directory_title_text_color</item>
+        <item name="android:fontWeight">600</item>
+    </style>
+
+    <style name="TreeView.Tile.Directory.Count">
+        <item name="android:textSize">@dimen/tree_view_directory_count_text_size</item>
+        <item name="android:textColor">@color/tree_view_directory_count_text_color</item>
+        <item name="android:fontWeight">400</item>
+    </style>
+
 </resources>

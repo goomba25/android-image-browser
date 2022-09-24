@@ -11,7 +11,7 @@ import com.example.usbgallerytojava.fragment.FragmentHost;
 import com.example.usbgallerytojava.fragment.TreeViewFragment;
 
 public class MainActivity extends FragmentActivity implements FragmentHost {
-    private static final String TAG = "";
+    private static final String TAG = "Goomba#";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
