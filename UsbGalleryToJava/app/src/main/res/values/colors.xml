@@ -17,4 +17,5 @@
     <color name="tree_view_directory_title_text_color">@color/white</color>
     <color name="tree_view_directory_count_text_color">#858585</color>
 
+    <color name="popup_item_select_text_color">#2196F3</color>
 </resources>

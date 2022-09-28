@@ -10,4 +10,7 @@
     <dimen name="tree_view_directory_title_text_size">32dp</dimen>
     <dimen name="tree_view_directory_count_text_size">20dp</dimen>
 
+    <dimen name="popup_item_height">50dp</dimen>
+    <dimen name="popup_item_text_size">20dp</dimen>
+
 </resources>

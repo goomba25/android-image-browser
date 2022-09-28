@@ -31,4 +31,9 @@
         <item name="android:fontWeight">400</item>
     </style>
 
+    <style name="PopupItem">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/popup_item_text_size</item>
+    </style>
+
 </resources>

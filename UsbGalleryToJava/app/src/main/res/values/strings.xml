@@ -4,4 +4,6 @@
     <string name="tree_view_default_title_text">USB Gallery</string>
 
     <string name="tree_view_none_connection_text">No Devices</string>
+
+    <string name="popup_no_connected_device_text">연결 장치 없음</string>
 </resources>
