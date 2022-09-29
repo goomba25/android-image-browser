@@ -118,7 +118,7 @@ public class MainActivity extends FragmentActivity
     }
 
     private void updateStorages() {
-        List<StorageVolume> volumes = mStorageManager.getStorageVolumes();
+        List<StorageVolume> volumes = mStorageManager.getRecentStorageVolumes();
         mUsbStorages.clear();
         for (StorageVolume volume : volumes) {
             if (volume.isPrimary()) {
@@ -126,6 +126,7 @@ public class MainActivity extends FragmentActivity
             } else if (volume.isEmulated()) {
                 Log.d(TAG, "Emulated Storage: " + volume.getDescription(this));
             } else {
+                Log.d(TAG, "USB Storage: " + volume.getDescription(this));
                 mUsbStorages.add(volume);
             }
         }
