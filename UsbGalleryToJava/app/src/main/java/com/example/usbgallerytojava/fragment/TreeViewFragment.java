@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.usbgallerytojava.R;
 import com.example.usbgallerytojava.TreeViewAdapter;
 import com.example.usbgallerytojava.popup.StorageListPopup;
+import com.example.usbgallerytojava.service.DataModel;
 
 import java.util.List;
 
@@ -38,13 +39,30 @@ public class TreeViewFragment extends Fragment {
     private RecyclerView mTreeView;
     private TreeViewAdapter mAdapter;
 
+    private final DataModel mDataModel;
+
     private final StorageListPopup.PopupCallback mPopupCallback =
             new StorageListPopup.PopupCallback() {
                 @Override
                 public void onItemClicked(String description) {
                     Log.d(TAG, "onItemClicked: " + description);
+                    mFragmentHost.setSelectedStorage(description);
+                    updateTreeView();
                 }
             };
+
+    private final DataModel.UpdateCallback mUpdateCallback =
+            new DataModel.UpdateCallback() {
+                @Override
+                public void update() {
+                    updateTreeView();
+                }
+            };
+
+    public TreeViewFragment(DataModel dataModel) {
+        mDataModel = dataModel;
+        mDataModel.setUpdateCallback(mUpdateCallback);
+    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -103,6 +121,10 @@ public class TreeViewFragment extends Fragment {
             mTreeView.setVisibility(View.INVISIBLE);
         }
         updatePopup();
+    }
+
+    public void updateTreeView() {
+        mAdapter.update(mDataModel.getDirectoryList(), mDataModel.getFileList());
     }
 
     private void updatePopup() {

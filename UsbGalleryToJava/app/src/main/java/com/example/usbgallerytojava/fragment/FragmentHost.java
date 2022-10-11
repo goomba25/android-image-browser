@@ -10,6 +10,7 @@ public interface FragmentHost {
     void launchFragment(Fragment fragment);
     void goBack();
     List<StorageVolume> getStorageList();
-    void setSelectedStorage();
+    void setSelectedStorage(String selectedStorage);
     StorageVolume getSelectedStorage();
+    void changeDirectory(String dirName);
 }

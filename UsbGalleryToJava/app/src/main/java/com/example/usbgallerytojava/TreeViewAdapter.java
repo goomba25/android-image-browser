@@ -24,8 +24,8 @@ public class TreeViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     private LayoutInflater mInflater;
     private final GridSpanSizeLookup mSpanSizeLookup = new GridSpanSizeLookup();
 
-    private final List<DirectoryTile> mDirs = new ArrayList<>();
-    private final List<FileTile> mFiles = new ArrayList<>();
+    private List<DirectoryTile> mDirs = new ArrayList<>();
+    private List<FileTile> mFiles = new ArrayList<>();
 
     public TreeViewAdapter(Context context) {
         mContext = context;
@@ -80,6 +80,12 @@ public class TreeViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         GridLayoutManager gridLayoutManager = new GridLayoutManager(mContext, COLUMN_INDEX);
         gridLayoutManager.setSpanSizeLookup(mSpanSizeLookup);
         return gridLayoutManager;
+    }
+
+    public void update(List<DirectoryTile> dirs, List<FileTile> files) {
+        mDirs = dirs;
+        mFiles = files;
+        notifyDataSetChanged();
     }
 
     private class DirectoryHolder extends RecyclerView.ViewHolder {
